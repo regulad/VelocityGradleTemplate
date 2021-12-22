@@ -1,3 +1,3 @@
-# BukkitGradleTemplate
+# VelocityGradleTemplate
 
-A template plugin for Minecraft Paper Plugins with Gradle.
+A template for Minecraft Velocity Proxy Plugins with Gradle.
