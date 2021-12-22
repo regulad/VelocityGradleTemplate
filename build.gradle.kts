@@ -23,7 +23,7 @@ dependencies {
     annotationProcessor("com.velocitypowered", "velocity-api", "3.1.0-SNAPSHOT")
 
     implementation("org.bstats", "bstats-velocity", "2.2.1")
-    implementation("org.jetbrains", "annotations", "23.0.0")
+    compileOnly("org.jetbrains", "annotations", "23.0.0")
 }
 
 tasks {
@@ -41,9 +41,8 @@ tasks {
     }
 
     shadowJar {
-        fun reloc(pkg: String) = relocate(pkg, "$group.${rootProject.name}.dependency.$pkg")
+        fun reloc(pkg: String) = relocate(pkg, "${rootProject.group}.${rootProject.name}.dependency.$pkg")
 
         reloc("org.bstats")
-        reloc("org.jetbrains")
     }
 }
